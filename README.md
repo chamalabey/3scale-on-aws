@@ -14,5 +14,11 @@ Steps:
 
 1. Create new project 
 2. Create registry authentication https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/installing_3scale/install-threescale-on-openshift-guide#configuring-registry-authentication-in-openshift
+3. Create *aws-secret* using the file aws-s3-secret.yml. Please make sure you update {Bracketed_Fields} with your own.
+
+    oc create -f  aws-s3-secret.yml
+
+4. Install the *APIManager* by clicking **Create APIManager** button with the configuration in the *Operator-APIManager-Config.yml*
+    
 
 
