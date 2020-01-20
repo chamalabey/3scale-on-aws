@@ -1,0 +1,15 @@
+apiVersion: apps.3scale.net/v1alpha1
+kind: APIManager
+metadata:
+  name: threescale-apimanager
+  namespace: {YOUR_OCP_PROJECT}
+spec:
+  wildcardDomain: apps.{YOUR_DOMAIN}
+  resourceRequirementsEnabled: false
+  system:
+    fileStorage:
+      amazonSimpleStorageService:
+        awsBucket: {Bucket_Name}
+        awsCredentialsSecret: 
+          name: {OCP_Secret_With_AWS_Credentials}
+        awsRegion: {AWS_REGION}
